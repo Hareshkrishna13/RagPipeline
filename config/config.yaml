@@ -1,0 +1,48 @@
+loaders:
+  pdf:
+    primary: pymupdf4llm
+    fallback: pymupdf
+    chunk_size: 1000
+    chunk_overlap: 200
+  txt:
+    loader: langchain
+    chunk_size: 1000
+    chunk_overlap: 200
+  csv:
+    loader: langchain
+    chunk_size: 500
+    chunk_overlap: 100
+  docx:
+    loader: python-docx
+    chunk_size: 800
+    chunk_overlap: 150
+  html:
+    loader: langchain
+    chunk_size: 800
+    chunk_overlap: 150
+
+chunking:
+  strategy: recursive_character
+  pdf:
+    chunk_size: 1000
+    chunk_overlap: 200
+  txt:
+    chunk_size: 1000
+    chunk_overlap: 200
+  csv:
+    chunk_size: 500
+    chunk_overlap: 100
+  docx:
+    chunk_size: 800
+    chunk_overlap: 150
+  html:
+    chunk_size: 800
+    chunk_overlap: 150
+
+embeddings:
+  model: all-MiniLM-L6-v2
+  device: cpu
+
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.0
