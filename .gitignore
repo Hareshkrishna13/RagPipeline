@@ -43,3 +43,9 @@ uv.lock
 # Cache
 .pytest_cache/
 .coverage
+GROQ_INTEGRATION_COMPLETE.md
+GROQ_INTEGRATION.md
+GROQ_QUICK_START.md
+LLM_INTEGRATION_SUMMARY.md
+LLM_INTEGRATION.md
+.env
